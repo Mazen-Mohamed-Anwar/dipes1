@@ -3,7 +3,7 @@ import Hero from '../../Layout/Hero'
 import Card from '../../Layout/Card'
 import HU from '../../assets/img/HU.png'
 import Bedroom from '../../assets/icon/Bedroom.svg'
-import vector from '../../assets/icon/vector.svg'
+import vector from '../../assets/icon/Vector.svg'
 import size from '../../assets/icon/size.svg'
 import api from '../../utils/axios-instance'
 import { Navigate, useNavigate } from 'react-router-dom';
