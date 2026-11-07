@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Logo from '../assets/img/Logo.png'
 
 export default function Navbar() {
@@ -8,51 +7,54 @@ export default function Navbar() {
 
   const closeMenu = () => setIsOpen(false)
 
+  const linkStyle = ({ isActive }) =>
+    `${isActive ? 'text-red-900' : 'text-gray-600'} hover:text-red-900 text-lg font-serif transition-colors`
+
   return (
     <nav className="relative w-full min-h-20 bg-white shadow-md z-50 font-bold" style={{ fontFamily: "Lato, sans-serif" }}>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 min-h-20 flex items-center justify-between">
 
         {/* Logo */}
-        <Link to="/" onClick={closeMenu}>
+        <NavLink to="/" onClick={closeMenu}>
           <img
             src={Logo}
             alt="Logo"
             className="w-20 md:w-24 h-auto object-contain"
           />
-        </Link>
+        </NavLink>
 
         {/* Desktop Links */}
         <ul className="hidden lg:flex items-center gap-8">
 
           <li>
-            <Link to="/" className="text-red-900 text-lg font-serif">
+            <NavLink to="/" end className={linkStyle}>
               Home
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link to="/units" className="text-gray-600 hover:text-red-900 text-lg font-serif">
+            <NavLink to="/units" className={linkStyle}>
               Units
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link to="/zones" className="text-gray-600 hover:text-red-900 text-lg font-serif">
+            <NavLink to="/zones" className={linkStyle}>
               Zones
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link to="/developers" className="text-gray-600 hover:text-red-900 text-lg font-serif">
+            <NavLink to="/developers" className={linkStyle}>
               Developers
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link to="/contactus" className="text-gray-600 hover:text-red-900 text-lg font-serif">
+            <NavLink to="/contactus" className={linkStyle}>
               Contact Us
-            </Link>
+            </NavLink>
           </li>
 
         </ul>
@@ -82,33 +84,33 @@ export default function Navbar() {
           <ul className="flex flex-col items-center gap-5 py-6">
 
             <li>
-              <Link to="/" onClick={closeMenu} className="text-red-900 text-lg">
+              <NavLink to="/" end onClick={closeMenu} className={linkStyle}>
                 Home
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link to="/units" onClick={closeMenu} className="text-gray-600 text-lg">
+              <NavLink to="/units" onClick={closeMenu} className={linkStyle}>
                 Units
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link to="/zones" onClick={closeMenu} className="text-gray-600 text-lg">
+              <NavLink to="/zones" onClick={closeMenu} className={linkStyle}>
                 Zones
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link to="/developers" onClick={closeMenu} className="text-gray-600 text-lg">
+              <NavLink to="/developers" onClick={closeMenu} className={linkStyle}>
                 Developers
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link to="/contactus" onClick={closeMenu} className="text-gray-600 text-lg">
+              <NavLink to="/contactus" onClick={closeMenu} className={linkStyle}>
                 Contact Us
-              </Link>
+              </NavLink>
             </li>
 
             <li className="w-full px-6">
