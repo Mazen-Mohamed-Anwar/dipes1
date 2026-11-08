@@ -8,14 +8,20 @@ export default function Card({img,bed,bath,siz,title,price,prag,id,Bedroom,vecto
     <>
     <div>
 
-      <div className="grid w-[442px] h-[529px] rounded-[16px] shadow shadow-xl shadow-gray-500  bg-[#EAEAEA]  grid-rows-[220px_25px_40px_2fr_1fr] gap-1">
+      <div className="grid w-full max-w-[442px] min-h-[529px]  rounded-[16px] shadow-xl shadow-gray-500 bg-[#EAEAEA] grid-rows-[220px_auto_auto_1fr_auto] gap-2 overflow-hidden  mx-auto">
        <div className='w-full h-full relative '>
         {tru ?(
           <div className='w-25 h-auto  bg-[#21E008] absolute   right-3 rounded-sm justify-center items-center  translate-y-1/2 text-white text-center'>Available</div>
         ):("")
           }
 
-        <img src={img} alt="HU" className="w-full h-full object-cover rounded-t-[16px]"/>
+        <div className="w-full h-[180px] sm:h-[220px] relative">
+  <img
+    src={img}
+    alt="HU"
+    className="w-full h-full object-cover rounded-t-[16px]"
+  />
+</div>
         
        </div>
 
@@ -46,23 +52,32 @@ export default function Card({img,bed,bath,siz,title,price,prag,id,Bedroom,vecto
 
 
 
-            <div className='w-auto h-auto grid grid-cols-2 mx-2  mt-2   '>
-          
-            <h3 className='text-[#8E1616] font-semibold text-2xl' style={{ fontFamily: '"Playfair Display", serif' }}>{title}</h3>
-            <h3 className='text-[#A18E77] font-semibold  text-right text-2xl' style={{ fontFamily: '"Playfair Display", serif' }}>{price}</h3>
-             </div>
+           <div className="grid grid-cols-2 gap-2 mx-3 mt-2 items-center">
+  <h3 className="text-[#8E1616] font-semibold text-lg sm:text-2xl">
+    {title}
+  </h3>
 
+  <h3 className="text-[#A18E77] font-semibold text-right text-base sm:text-2xl">
+    {price}
+  </h3>
+</div>
              
 
-              <div className='mx-2   min-h-0 overflow-y-auto '>
-                <p className='text-[#847D7D] font-medium' style={{ fontFamily: "Lato, sans-serif" }}>{prag}</p>
-              </div>
+             <div className="mx-2 min-h-0 overflow-y-auto">
+  <p className="text-[#847D7D] font-medium"
+    style={{ fontFamily: "Lato, sans-serif" }}>
+    {prag}
+  </p>
+</div>
 
-              <div className='w-auto  mx-2  '>
-                <button className='border w-full h-[40px] rounded-[8px] border-[#8E1616] text-[#8E1616]'
-                onClick={()=>navigate(`/${ap}/${id}`)}
-                >View Details</button>
-              </div>
+<div className="w-full px-2 pb-3">
+  <button
+    className="border w-full h-[40px] rounded-[8px] border-[#8E1616] text-[#8E1616]"
+    onClick={() => navigate(`/${ap}/${id}`)}
+  >
+    View Details
+  </button>
+</div>
 
 </div>
       

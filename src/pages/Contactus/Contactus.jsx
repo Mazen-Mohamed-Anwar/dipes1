@@ -107,54 +107,96 @@ export default function Contactus() {
 
        
       
-          <div className="flex flex-col w-auto justify-center items-center h-auto sm:ml-0 xl:ml-18 ">
-
-<div class="relative flex flex-col rounded-xl bg-transparent bg-blue-50 ">
-  <h4 class="block text-xl font-bold text-slate-800" style={{ fontFamily: '"Playfair Display", serif' }}>
-    Send us a message
-  </h4>
   
-  <form class="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
-    <div class="mb-1 flex flex-col gap-6">
-      <div class="w-full max-w-sm min-w-[200px]">
-        <label class="block mb-2 text-sm text-slate-600 font-bold " style={{ fontFamily: '"Playfair Display", serif' }}>
-          Name
-        </label>
-        <input type="text" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Your Name" />
-      </div>
-      <div class="w-full max-w-sm min-w-[200px]">
-        <label class="block mb-2 text-sm text-slate-600 font-bold " style={{ fontFamily: '"Playfair Display", serif' }}>
-          Email
-        </label>
-        <input type="email" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Your Email" />
-      </div>
-      <div class="w-full max-w-sm min-w-[200px]" style={{ fontFamily: '"Playfair Display", serif' }}>
-        <label class="block mb-2 text-sm text-slate-600 font-bold ">
-          Phone
-        </label>
-        <input type="text" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Your Phone" />
-      </div>
-      <div class="w-full max-w-sm min-w-[200px]" style={{ fontFamily: '"Playfair Display", serif' }}>
-        <label class="block mb-2 text-sm text-slate-600 font-bold ">
-          Message
-        </label>
-        <input type="text" class="w-full h-24 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Message" />
-      </div>
-    </div>
+<div className="w-full flex justify-center items-center px-4 py-8">
 
-    
-    <button class="mt-4 w-full rounded-md bg-red-700 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-800 focus:shadow-none active:bg-red-800 hover:bg-red-800 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
-      Send Message
-    </button>
-    
-  </form>
-</div>
-      
+
+  <div className="
+    w-full
+    max-w-[450px]
+    bg-[#FFFFFF]
+    rounded-2xl
+    shadow-xl
+    p-6
+    sm:p-8
+    border border-[#A18E77]/30
+  ">
+
+    <h4
+      className="text-2xl font-bold text-black text-start"
+      style={{ fontFamily: '"Playfair Display", serif' }}
+    >
+      Send us a message
+    </h4>
+
+    <form className="mt-8">
+
+      <div className="flex flex-col gap-5">
+
+        <div className="w-full">
+          <label className="block mb-2 text-sm font-bold text-black">
+            Name
+          </label>
+
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="w-full bg-[#EAEAEA] text-slate-700 text-sm border border-[#A18E77]/50 rounded-lg px-3 py-3 outline-none focus:border-[#8E1616] transition"
+          />
         </div>
-       </div>
-      
+
+        <div className="w-full">
+          <label className="block mb-2 text-sm font-bold text-black">
+            Email
+          </label>
+
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="w-full bg-[#EAEAEA] text-slate-700 text-sm border border-[#A18E77]/50 rounded-lg px-3 py-3 outline-none focus:border-[#8E1616] transition"
+          />
+        </div>
+
+        <div className="w-full">
+          <label className="block mb-2 text-sm font-bold text-black">
+            Phone
+          </label>
+
+          <input
+            type="text"
+            placeholder="Your Phone"
+            className="w-full bg-[#EAEAEA] text-slate-700 text-sm border border-[#A18E77]/50 rounded-lg px-3 py-3 outline-none focus:border-[#8E1616] transition"
+          />
+        </div>
+
+        <div className="w-full">
+          <label className="block mb-2 text-sm font-bold text-black">
+            Message
+          </label>
+
+          <textarea
+            placeholder="Write your message..."
+            rows="4"
+            className="w-full resize-none bg-[#EAEAEA] text-slate-700 text-sm border border-[#A18E77]/50 rounded-lg px-3 py-3 outline-none focus:border-[#8E1616] transition"
+          />
+        </div>
+
       </div>
-          
+
+      <button
+        className="mt-6 w-full rounded-lg bg-[#8E1616] py-3 px-4 text-white font-semibold transition-all hover:bg-[#6f1111] hover:shadow-lg"
+        type="button"
+      >
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+</div>
+</div>
+</div>
+
     </div>
   )
 }

@@ -2,5 +2,11 @@
 @plugin "daisyui";
 html, body {
   overflow-x: hidden;
+   color-scheme: light;
 }
+:root {
+  color-scheme: light;
+}
+
+
 

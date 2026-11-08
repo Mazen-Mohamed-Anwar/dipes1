@@ -19,9 +19,9 @@ export default function Hero({btn,icon,img,ds,title,title2}) {
   <span className="block">{title}</span>
   <span className="block">{title2}</span>
 </h1>
-<div className='w-2/2 md:w-2/3 mt-5'>
+<div className="w-full sm:w-11/12 md:w-2/3 mt-5 mx-auto px-3">
 
-<p className=" text-gray-300 font-bold bg-center text-center space-y-2 text-sm  md:text-2xl" style={{ fontFamily: '"Lato", sans-serif' }} >{ds}</p>
+<p className="text-gray-300 font-bold text-center text-sm sm:text-base md:text-xl lg:text-2xl leading-relaxed break-words" style={{ fontFamily: '"Lato", sans-serif' }} >{ds}</p>
      </div>
      
      

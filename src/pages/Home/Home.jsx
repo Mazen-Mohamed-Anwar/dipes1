@@ -264,63 +264,70 @@ const imag = [
 <Title title={"Future Landmarks"} mto={"mt-[150px]"}/>
 
 
-<div className="w-auto overflow-hidden my-20 mx-20">
+<div className="w-full overflow-hidden my-10 md:my-20 px-3 md:px-10 lg:px-20">
 
+  <div
+    className="flex transition-transform duration-400"
+    style={{
+      transform: `translateX(-${index1 * (100 / itemsPerView1)}%)`
+    }}
+  >
+    {imag.map((img, i) => (
       <div
-        className="flex transition-transform duration-400"
-        style={{
-          transform: `translateX(-${index1 * (100 / itemsPerView1)}%)`
-        }}
+        key={i}
+        className="shrink-0 px-2"
+        style={{ width: `${100 / itemsPerView1}%` }}
       >
-        {imag.map((img, i) => (
-          <div
-            key={i}
-            className="shrink-0 w-full"
-            style={{ width: `${100 / itemsPerView1}%` }}
-          >
 
-        <div className='w-[400px] h-[377px]   rounded-2xl grid-cols-[50px_25px_40px] justify-center items-center  '>
+        <div className="w-full max-w-[400px] h-[377px] mx-auto rounded-2xl">
 
-       <div className='w-full h-full shadow-md rounded-xl'>
-        
-        <img src={img} alt="HU" className="w-full h-[250px] object-none rounded-t-[16px]"/>
-         <img src={im8} alt="HU" className="w-auto h-[50px] object-cover rounded-t-[16px]"/>
+          <div className="w-full h-full shadow-md rounded-xl overflow-hidden">
 
-          <div className='w-auto  mx-2 mt-5  '>
-                <button className='border w-full h-[40px] rounded-[8px] border-[#8E1616] text-[#8E1616]'
-                onClick={()=>navigate(`/units/${id}`)}
-                >View Details</button>
-              </div>
-       </div>
-       </div>
+            <img
+              src={img}
+              alt="HU"
+              className="w-full h-[250px] object-cover"
+            />
+
+            <img
+              src={im8}
+              alt="HU"
+              className="w-auto h-[50px] object-cover mt-2"
+            />
+
+            <div className="mx-2 mt-5">
+              <button
+                className="border w-full h-[40px] rounded-[8px] border-[#8E1616] text-[#8E1616]"
+                onClick={() => navigate(`/units/${id}`)}
+              >
+                View Details
+              </button>
             </div>
-  
-            
-        
-           
-        
-        ))}
-      </div>
 
-      <div className="flex justify-center gap-3 mt-5">
-
-      {Array.from({ length: 3 }).map((_, i) => (
-    <button
-      key={i}
-      onClick={() => setIndex1(i)}
-      className={`h-3 rounded-full transition-all duration-300 ${
-        index1 === i
-          ? "bg-red-900 w-8"
-          : "bg-gray-300 w-3"
-      }`}
-    />
-  ))}
-
+          </div>
+        </div>
 
       </div>
+    ))}
+  </div>
 
-    </div>
+  <div className="flex justify-center gap-3 mt-5">
 
+    {Array.from({ length: 3 }).map((_, i) => (
+      <button
+        key={i}
+        onClick={() => setIndex1(i)}
+        className={`h-3 rounded-full transition-all duration-300 ${
+          index1 === i
+            ? "bg-red-900 w-8"
+            : "bg-gray-300 w-3"
+        }`}
+      />
+    ))}
+
+  </div>
+
+</div>
 
 
     </div></>
