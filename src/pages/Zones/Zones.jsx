@@ -86,7 +86,7 @@ gap-10
           return(
             <div key={zone.id} >
               <img src={zone.images} className='w-full h-48 rounded-xl mb-10' alt='zones' onClick={()=>navigate(`/zones/${zone.id}`)}></img>
-              <img src={zone.images} className='w-full h-48 rounded-xl' alt='zones  ' onClick={()=>navigate(`/zones/${zone.id}`)}></img>
+             
               
 
             </div>
