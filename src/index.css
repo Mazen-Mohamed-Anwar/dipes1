@@ -1,5 +1,18 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@layer base {
+  html {
+    color-scheme: light;
+      overflow-x: hidden;
+    color-scheme: light !important;
+  background-color: #ffffff;
+  }
+
+  body {
+    @apply bg-white text-black;
+  }
+}
 html, body {
   overflow-x: hidden;
     color-scheme: light !important;
