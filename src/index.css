@@ -2,10 +2,15 @@
 @plugin "daisyui";
 html, body {
   overflow-x: hidden;
-   color-scheme: light;
+    color-scheme: light !important;
+  background-color: #ffffff;
+  
 }
 :root {
   color-scheme: light;
+   background-color: #ffffff;
+  color-scheme: light !important;
+  min-height: 100%;
 }
 
 

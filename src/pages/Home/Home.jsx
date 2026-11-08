@@ -103,7 +103,7 @@ const imag = [
      
      
      />
-      {/* First one */}
+      
 <div className='h-auto  flex justify-center items-center flex-col'>
 
 
@@ -151,7 +151,7 @@ const imag = [
  </div>
 
     </div>
-{/* First two */}
+
 
 <div className='h-auto  mb-10 flex  items-center flex-col '>
 
@@ -204,48 +204,65 @@ const imag = [
 <Title title={"Hand-Selected Masterpieces"} mto={"mt-[150px]"}/>
 
 
-<div className="w-auto overflow-hidden my-20 mx-10">
+<div className="w-full overflow-hidden my-10 sm:my-16 md:my-20 px-3 sm:px-5 md:px-10">
 
+  <div
+    className="flex transition-transform duration-500"
+    style={{
+      transform: `translateX(-${index * (100 / itemsPerView)}%)`
+    }}
+  >
+    {images.map((img, i) => (
       <div
-        className="flex transition-transform duration-400"
-        style={{
-          transform: `translateX(-${index * (100 / itemsPerView)}%)`
-        }}
+        key={i}
+        className="shrink-0 px-2"
+        style={{ width: `${100 / itemsPerView}%` }}
       >
-        {images.map((img, i) => (
-          <div
-            key={i}
-            className="shrink-0 px-2"
-            style={{ width: `${100 / itemsPerView}%` }}
-          >
-            <img
-              src={img}
-              className="w-full h-64 object-cover rounded-xl"
-              alt=""
-            />
-           
-          </div>
-        ))}
+        <img
+          src={img}
+          alt={`Project ${i + 1}`}
+          className="
+            w-full
+            h-[180px]
+            sm:h-[250px]
+            md:h-[300px]
+            lg:h-[350px]
+            object-cover
+            rounded-xl
+          "
+        />
+      </div>
+    ))}
+  </div>
+
+  {/* Slider Buttons */}
+  <div className="flex justify-center gap-3 mt-5">
+
+    {Array.from({
+      length: Math.ceil(images.length / itemsPerView)
+    }).map((_, i) => (
+
+      <button
+        key={i}
+        onClick={() => setIndex(i)}
+        className={`h-3 rounded-full transition-all duration-300 ${
+          index === i
+            ? "bg-red-900 w-8"
+            : "bg-gray-300 w-3"
+        }`}
+      />
+
+    ))}
+
+  </div>
+
+</div>
+
+
+
       </div>
 
-      <div className="flex justify-center gap-3 mt-5">
-
-      {Array.from({ length: 3 }).map((_, i) => (
-    <button
-      key={i}
-      onClick={() => setIndex(i)}
-      className={`h-3 rounded-full transition-all duration-300 ${
-        index === i
-          ? "bg-red-900 w-8"
-          : "bg-gray-300 w-3"
-      }`}
-    />
-  ))}
-
-
-      </div>
-
-    </div>
+    
 
 
 <Title title={"Strategic Locations"} mto={"mt-[150px] mb-[40px]"}/>
